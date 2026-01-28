@@ -1,5 +1,6 @@
 # HI-FAD
 본 폴더는 HI-FAD에 대한 연구 코드를 저장합니다.
+폴더의 구조는 다음과 같습니다.
 
 ```bash
 DB/
@@ -55,10 +56,15 @@ mkdir ASVspoof_LA_cm_protocols
 ```
 # Train Our Model
 python AASIST_waveletencoder_frequency.py --config config/AASIST_waveletencoder_frequency.conf
+
+# Train Custom Model
+python [YOUT MAIN FILE] --config config/[YOUT CONFIG FILE].conf
 ```
 
 ## Evaluation
 evaluate.sh를 실행하기 전 Scores 파일 경로를 설정해야합니다.
+ex) `python ./la_evaluate.py exp_result/[Scores 파일 경로] [LA keys 폴더 경로] eval`
+
 ```
 bash evaluate.sh
 ```
